@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LocalStorageService } from '../../services/localStorageService';
+
 import { SVGIcon } from '../SVG/Icons';
 import './SavedPlans.css';
 
