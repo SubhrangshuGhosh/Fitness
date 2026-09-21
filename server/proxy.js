@@ -72,7 +72,7 @@ app.post('/api/generate', async (req, res) => {
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.5-flash-lite',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
@@ -120,7 +120,7 @@ app.get('/api/health', (req, res) => {
   res.json({
     ok: true,
     hasKey: Boolean(process.env.GEMINI_API_KEY),
-    model: 'gemini-2.5-flash',
+    model: 'gemini-3.5-flash-lite',
   });
 });
 
