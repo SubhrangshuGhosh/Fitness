@@ -1,0 +1,35 @@
+#logo-root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#logo-mark {
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+  border-radius: 12px;
+}
+
+#logo-root:hover #logo-mark {
+  transform: translateY(-1px);
+}
+
+#logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  #logo-text { font-size: 1rem; }
+  #logo-root { gap: 8px; }
+}
+
+@media (hover: none) {
+  #logo-root:hover #logo-mark { transform: none; }
+}

@@ -1,0 +1,136 @@
+#workoutcard-root {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Header ===== */
+.workoutcard-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workoutcard-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-glow);
+}
+
+.workoutcard-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.workoutcard-split {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  padding: 12px 14px;
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-md);
+}
+
+/* ===== Days ===== */
+.workoutcard-days {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.workoutcard-day {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.workoutcard-day:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.workoutcard-day-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.workoutcard-day-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.workoutcard-day-focus {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.005em;
+}
+
+/* ===== Exercises ===== */
+.workoutcard-exercises {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.workoutcard-exercise {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.workoutcard-exercise-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.workoutcard-exercise-meta {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: -0.005em;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  #workoutcard-root {
+    padding: 18px 18px 20px;
+    gap: 16px;
+  }
+
+  .workoutcard-exercise {
+    padding: 7px 10px;
+    font-size: 0.87rem;
+  }
+
+  .workoutcard-exercise-meta {
+    font-size: 0.78rem;
+  }
+}

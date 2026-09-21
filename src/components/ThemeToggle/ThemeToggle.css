@@ -1,0 +1,44 @@
+#themetoggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background var(--transition-base),
+              border-color var(--transition-base),
+              color var(--transition-base),
+              transform var(--transition-fast);
+}
+
+#themetoggle-button:active {
+  transform: scale(0.94);
+}
+
+/* Hover only on real mouse */
+@media (hover: hover) and (pointer: fine) {
+  #themetoggle-button:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-strong);
+    transform: rotate(15deg) scale(1.05);
+  }
+}
+
+/* Bigger tap target on touch */
+@media (hover: none) {
+  #themetoggle-button {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 640px) {
+  #themetoggle-button {
+    width: 38px;
+    height: 38px;
+  }
+}

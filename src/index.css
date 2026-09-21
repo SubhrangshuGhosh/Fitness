@@ -1,0 +1,235 @@
+/* ============================================
+   Athlos — Global Styles (Gradient Edition)
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.006em;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+img, svg, video { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: none; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ============================================
+   Light Theme
+   ============================================ */
+:root {
+  /* Brand — warm orange → coral gradient */
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-primary-soft: #fff5ed;
+  --color-primary-ring: rgba(249, 115, 22, 0.22);
+
+  --gradient-brand: linear-gradient(135deg, #fb923c 0%, #f97316 45%, #e11d48 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #fff5ed 0%, #ffe8d5 100%);
+  --gradient-hero: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #fbfaf8 100%);
+
+  --color-success: #059669;
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+
+  /* Surfaces */
+  --bg-app: #fbfaf9;
+  --bg-app-gradient: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(251, 146, 60, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 100% 100%,
+      rgba(225, 29, 72, 0.05) 0%,
+      transparent 60%
+    );
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f7f6f4;
+  --bg-hover: #f0eeeb;
+
+  /* Text */
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --text-inverse: #ffffff;
+
+  /* Borders */
+  --border-subtle: #ebe8e5;
+  --border-strong: #d9d6d2;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05),
+    0 2px 6px -1px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 4px 16px -4px rgba(28, 25, 23, 0.1),
+    0 2px 6px -2px rgba(28, 25, 23, 0.05);
+  --shadow-lg: 0 16px 40px -12px rgba(28, 25, 23, 0.18),
+    0 6px 16px -6px rgba(28, 25, 23, 0.08);
+  --shadow-glow: 0 8px 28px -8px rgba(249, 115, 22, 0.35);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 120ms var(--ease-standard);
+  --transition-base: 180ms var(--ease-standard);
+  --transition-slow: 300ms var(--ease-out);
+
+  --content-max: 720px;
+  --content-wide: 1120px;
+}
+
+/* ============================================
+   Dark Theme
+   ============================================ */
+:root[data-theme='dark'] {
+  --color-primary: #fb923c;
+  --color-primary-hover: #fdba74;
+  --color-primary-soft: #2a1810;
+  --color-primary-ring: rgba(251, 146, 60, 0.3);
+
+  --gradient-brand: linear-gradient(135deg, #fb923c 0%, #f97316 45%, #e11d48 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #2a1810 0%, #3b1e10 100%);
+  --gradient-hero: linear-gradient(135deg, #231a13 0%, #2a1810 100%);
+  --gradient-surface: linear-gradient(180deg, #1c1917 0%, #191614 100%);
+
+  --color-success: #34d399;
+  --color-danger: #f87171;
+  --color-warning: #fbbf24;
+
+  --bg-app: #0c0a09;
+  --bg-app-gradient: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(251, 146, 60, 0.1) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 100% 100%,
+      rgba(225, 29, 72, 0.06) 0%,
+      transparent 60%
+    );
+  --bg-surface: #1c1917;
+  --bg-surface-alt: #262220;
+  --bg-hover: #292524;
+
+  --text-primary: #f5f5f4;
+  --text-secondary: #d6d3d1;
+  --text-muted: #8a817c;
+  --text-inverse: #1c1917;
+
+  --border-subtle: #292524;
+  --border-strong: #44403c;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px -12px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 8px 28px -8px rgba(251, 146, 60, 0.4);
+}
+
+body {
+  background-color: var(--bg-app);
+  background-image: var(--bg-app-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--text-primary);
+  transition: background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--bg-app);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.container--wide { max-width: var(--content-wide); }
+
+input, textarea, select { font-size: 16px; }
+@media (min-width: 768px) {
+  input, textarea, select { font-size: 15.5px; }
+}
+
+button:disabled { cursor: not-allowed; }
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.tabular-nums, [data-tabular] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: app-fade-in 220ms var(--ease-out) both; }
+}
+
+@keyframes app-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

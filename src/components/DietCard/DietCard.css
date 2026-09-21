@@ -1,0 +1,184 @@
+#dietcard-root {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Header */
+.dietcard-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dietcard-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-glow);
+}
+
+.dietcard-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+/* Calories pill */
+.dietcard-calories-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 18px 20px;
+  background: var(--gradient-brand-soft);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-primary-ring);
+}
+
+.dietcard-calories-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.dietcard-calories-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Macros */
+.dietcard-macros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dietcard-macro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 6px;
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-md);
+}
+
+.dietcard-macro-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.dietcard-macro-unit {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-left: 1px;
+}
+
+.dietcard-macro-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Meals */
+.dietcard-meals {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dietcard-meal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dietcard-meal:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.dietcard-meal-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dietcard-meal-time {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.005em;
+}
+
+.dietcard-meal-cal {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dietcard-meal-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dietcard-meal-item {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.dietcard-meal-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  #dietcard-root {
+    padding: 20px;
+    gap: 16px;
+  }
+  .dietcard-calories-value { font-size: 1.9rem; }
+  .dietcard-meal-item { font-size: 0.87rem; }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="athlos-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="55%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded gradient background -->
+  <rect width="64" height="64" rx="14" fill="url(#athlos-bg)"/>
+
+  <!-- The A / peak -->
+  <path
+    d="M18 46 L32 18 L46 46"
+    stroke="#ffffff"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Crossbar -->
+  <path
+    d="M25 38 L39 38"
+    stroke="#ffffff"
+    stroke-width="4.5"
+    stroke-linecap="round"
+  />
+
+  <!-- Summit dot -->
+  <circle cx="32" cy="18" r="3" fill="#fbbf24"/>
+</svg>
